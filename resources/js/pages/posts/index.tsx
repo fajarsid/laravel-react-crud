@@ -37,7 +37,6 @@ export default function Posts({ posts, flash }: Props) {
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
     const [toastType, setToastType] = useState<'success' | 'error'>('success');
-    const [postToDelete, setPostToDelete] = useState<Post | null>(null);
     const [deleteModalOpen, setDeleteModalOpen] = useState(false);
     const [deletingPost, setDeletingPost] = useState<Post | null>(null);
 
@@ -115,11 +114,6 @@ export default function Posts({ posts, flash }: Props) {
             content: post.content || '',
         });
         setIsOpen(true);
-    };
-
-    const handleDeleteClick = (post: Post) => {
-        setDeletingPost(post);
-        setDeleteModalOpen(true);
     };
 
     const confirmDelete = () => {
