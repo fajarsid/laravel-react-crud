@@ -215,7 +215,7 @@ export default function Posts({ posts, flash }: Props) {
                                 <td className="border border-sidebar-border/70 p-2 dark:border-sidebar-border">{post.id}</td>
                                 <td className="border border-sidebar-border/70 p-2 dark:border-sidebar-border">{post.title}</td>
                                 <td className="border border-sidebar-border/70 p-2 dark:border-sidebar-border">{post.content}</td>
-                                <td>
+                                <td className="border border-sidebar-border/70 p-2 dark:border-sidebar-border">
                                     <div className="flex gap-2">
                                         <Button variant={'ghost'} size={'icon'} onClick={() => handleEdit(post)}>
                                             <Pencil className="h-4 w-4" />
